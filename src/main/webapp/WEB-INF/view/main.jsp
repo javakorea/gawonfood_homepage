@@ -9,16 +9,12 @@
 <script>
 	var ajax = {};
 	ajax.load = function(_id,_url,_data){
-		debugger;
 		$('#'+_id).load(_url,_data,function(){
-			debugger;
 		})
 	};
 	$(document).ready(function(){
-		debugger;
-		ajax.load("myAcademyList", "xhr/mypage/digitalplaza/academy/getMyAcademyList.do", {a:"12", b:"abc"})
+		ajax.load("myAcademyList", "/sec/xhr/mypage/digitalplaza/academy/getMyAcademyList", {a:"12", b:"abc"})
 	});
-	
 	
 </script>
 </head>

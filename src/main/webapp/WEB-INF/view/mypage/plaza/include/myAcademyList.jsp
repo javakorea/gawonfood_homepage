@@ -2,17 +2,18 @@
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ page import="java.util.*" %>
-<%@ page import="com.gawonfood.so.*" %>
 <!DOCTYPE html>
 <html>
 <head></head>
 <body>
 	<h3 style="color:red">myAcademyList 화면입니다</h3>
+	<%--
 	<%
 		String a = ((PlazaAcademyApplySO)request.getAttribute("reserveInfo")).getCusGbCd();
 		System.out.println("request--"+a);
 	%>
 	<h2 style="color:red">스크립틀릿 값: <%=a %></h2>
+	 --%>-
 	<h2><c:out value="${memberArr}"/></h2>
 	<c:choose>
 		<c:when test="${reserveInfo.cusGbCd eq '49'}">
