@@ -13,15 +13,14 @@
 		})
 	};
 	$(document).ready(function(){
-		ajax.load("myAcademyList", "/sec/xhr/mypage/digitalplaza/academy/getMyAcademyList", {a:"12", b:"abc"})
+		debugger;
+		ajax.load("myAcademyList", "/xhr/mypage/digitalplaza/academy/getMyAcademyList.do", {a:"12", b:"abc"})
 	});
 	
 </script>
 </head>
 <body>
 	<h3 id="main">안녕하세요</h3>
-	<div id = "myAcademyList">
-	
-	</div>
+	<div id = "myAcademyList"></div>
 </body>
 </html>

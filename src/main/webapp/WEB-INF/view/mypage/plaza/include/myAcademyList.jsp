@@ -4,17 +4,19 @@
 <%@ page import="java.util.*" %>
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+</head>
 <body>
-	<h3 style="color:red">myAcademyList 화면입니다</h3>
+	<h3 style="color:red">.do로 통해서 들어옴myAcademyList 화면입니다</h3>
 	<%--
 	<%
 		String a = ((PlazaAcademyApplySO)request.getAttribute("reserveInfo")).getCusGbCd();
 		System.out.println("request--"+a);
 	%>
 	<h2 style="color:red">스크립틀릿 값: <%=a %></h2>
-	 --%>-
+	
 	<h2><c:out value="${memberArr}"/></h2>
+	 --%>
 	<c:choose>
 		<c:when test="${reserveInfo.cusGbCd eq '49'}">
 			<spring:message code="column.rsv_stat_cd"/>
@@ -33,9 +35,13 @@
 				코드:<c:out value="${member.cusGbCd}"/> 
 				<br/>
 			</c:forEach>
-			
-			
 		</c:otherwise>
 	</c:choose>
+	
+	<form id="testform" name="testform" method="post" action="xhr/mypage/digitalplaza/academy/getLoginInfo.do">
+		<span>아이디:</span><input name="userId" type="text" size="30" value="">
+		<span>비밀번호:</span><input name="userPw" type="password" size="30" value="">
+		<input type="submit" value="로그인">
+	</form>
 </body>
 </html>
